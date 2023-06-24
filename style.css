@@ -7,14 +7,22 @@
 :root {
   --bg: #ffffff;
   --dark: #323238;
-  --blue: #02799d;
+  --btn-select: #02799d;
   --gray: #e1e1e6;
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+.dark {
+  --bg: #000000;
+  --dark: #C4C4CC;
+  --btn-select: #0A3442;
+  --gray: #29292E;
+  --switch-bg-url: url(./assets/moon-stars.svg);
 }
 
 body {
   background-color: var(--bg);
   font-family: 'Roboto', sans-serif;
-  color: var(--dark);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,11 +52,13 @@ button {
 .clock {
   align-self: center;
   justify-content: space-around;
+  color: var(--bg);
 }
 
 #controls {
   display: flex;
   justify-content: space-between;
+  color: var(--dark);
 }
 
 #controls button {
@@ -78,7 +88,7 @@ button {
 }
 
 .sounds button {
-background: var(--gray);
+  background: var(--gray);
   border-radius: 24px;
   width: 138px;
   height: 152px;
@@ -86,7 +96,7 @@ background: var(--gray);
 }
 
 .sound--active {
-    background: var(--blue) !important;
+    background: var(--btn-select) !important;
 }
 
 .sounds button i {
