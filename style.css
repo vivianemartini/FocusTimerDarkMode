@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #ffffff;
+  --dark: #323238;
+  --blue: #02799d;
+  --gray: #e1e1e6;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Roboto', sans-serif;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 821px;
+  height: 336px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.clock {
+  align-self: center;
+  justify-content: space-around;
+}
+
+#controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+#controls button {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#controls button:hover {
+  transform: scale(1.1);
+}
+
+#timer span {
+  text-align: center;
+  font-size: 126.166px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.sounds {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 180px;
+  align-items: center;
+  justify-content: center;
+  width: 308px;
+  height: 336px;
+}
+
+.sounds button {
+background: var(--gray);
+  border-radius: 24px;
+  width: 138px;
+  height: 152px;
+  cursor: pointer;
+}
+
+.sound--active {
+    background: var(--blue) !important;
+}
+
+.sounds button i {
+  font-size: 40px;
+  color: var(--dark)
+}
+
+.sounds button i:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(2px, 0, 0);
+  }
+}

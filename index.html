@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/bab75d632b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>Focus Timer Dark Mode</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="clock">
+          <div id="timer">
+            <span class="minutes">25</span>
+            <span>:</span>
+            <span class="seconds">00</span>
+          </div>
+
+          <div id="controls">
+            <button class="play">
+              <img src="./assets/play.svg" alt="" />
+            </button>
+            <button class="stop">
+              <img src="./assets/stop.svg" alt="" />
+            </button>
+            <button class="more-time">
+              <img src="./assets/more.svg" alt="" />
+            </button>
+            <button class="less-time">
+              <img src="./assets/less.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sounds"> 
+        <button class="sound__item" id="forest">
+            <a src="./sounds/Floresta.wav"></a>
+            <i class="fa-solid fa-tree"></i>
+        </button>
+
+        <button class="sound__item"><i class="fa-solid fa-cloud-rain"></i></button>
+
+        <button class="sound__item"><i class="fa-solid fa-mug-saucer"></i></button>
+
+        <button class="sound__item"><i class="fa-solid fa-fire"></i></button>
+      </div>
+    </main>
+
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
