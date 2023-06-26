@@ -17,15 +17,17 @@
   --dark: #C4C4CC;
   --btn-select: #0A3442;
   --gray: #29292E;
-  --switch-bg-url: url(./assets/moon-stars.svg);
+  --switch-bg-url: url(./assets/moon.svg);
 }
 
 body {
   background-color: var(--bg);
   font-family: 'Roboto', sans-serif;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 100px;
   min-height: 100vh;
 }
 
@@ -36,6 +38,33 @@ main {
 
   width: 821px;
   height: 336px;
+}
+
+header {
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  height: 60px;
+}
+
+#switch {
+  position: relative;
+  width: 64px;
+  left: 450px;
+}
+
+#switch button {
+  width: 38px;
+  height: 38px;
+  background: var(--bg) var(--switch-bg-url) no-repeat center;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .container {
@@ -53,6 +82,10 @@ button {
   align-self: center;
   justify-content: space-around;
   color: var(--bg);
+}
+
+#timer {
+  color: var(--dark);
 }
 
 #controls {
@@ -85,6 +118,7 @@ button {
   justify-content: center;
   width: 308px;
   height: 336px;
+  margin-bottom: 25px;
 }
 
 .sounds button {
