@@ -10,14 +10,16 @@
   --btn-select: #02799d;
   --gray: #e1e1e6;
   --switch-bg-url: url(./assets/sun.svg);
+  --bg-slider: #323238;
 }
 
 .dark {
   --bg: #000000;
   --dark: #C4C4CC;
-  --btn-select: #0A3442;
+  --btn-select: ;
   --gray: #29292E;
   --switch-bg-url: url(./assets/moon.svg);
+  --bg-slider: #FFFFFF;
 }
 
 body {
@@ -163,4 +165,36 @@ button {
   60% {
     transform: translate3d(2px, 0, 0);
   }
+}
+
+.sound__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.sound__item .slider {
+  -webkit-appearance: none;
+  border-radius: 5px;
+  background: var(--bg-slider);
+  cursor: pointer;
+  width: 90px;
+  height: 4px;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: var(--bg-slider);
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  border-radius: 50px;
 }
