@@ -8,8 +8,12 @@ const buttonFire = document.getElementById('fire')
 const audioFire = new Audio('./sounds/Lareira.wav')
 let isPlaying = false
 
-function handleButtonClick(button, audio) {
+function handleButtonClick(button, audio, volumeRange) {
+
   button.addEventListener('click', function () {
+
+    volumeRange.addEventListener("mousemove", setVolume);
+
     if (isPlaying) {
       // Stop the music
       audio.pause()
@@ -23,14 +27,20 @@ function handleButtonClick(button, audio) {
       isPlaying = true
       button.style.backgroundColor = '#02799d'
       button.querySelector('i').style.color = '#ffffff'
-      button.querySelector('input').style.backgroundColor = '#ffffff'
+      button.querySelector('input').style.backgroundColor = '#ffffff' 
+    }
+
+    function setVolume(){
+      if (isPlaying) {
+        audio.volume = volumeRange.value / 100;
+      }
     }
   })
 }
 
-handleButtonClick(buttonForest, audioForest)
-handleButtonClick(buttonRain, audioRain)
-handleButtonClick(buttonCoffee, audioCoffee)
-handleButtonClick(buttonFire, audioFire)
+handleButtonClick(buttonForest, audioForest, volumeSliderForest)
+handleButtonClick(buttonRain, audioRain, volumeSliderRain)
+handleButtonClick(buttonCoffee, audioCoffee, volumeSliderCoffee)
+handleButtonClick(buttonFire, audioFire, volumeSliderFire)
 
 export default handleButtonClick
