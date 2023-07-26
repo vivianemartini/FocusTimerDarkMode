@@ -12,7 +12,11 @@ Funcionalidades esperadas dos botões:
 - <span>+ </span>: aumenta em mais 5 minutos o tempo do timer;
 - <span>- </span>: diminui em 5 minutos o tempo do timer.
 
-Cada card que se encontra do lado direito, quando selecionado, vai mudar de cor e emitir um som diferente
+Nessa versão, o volume deverá ser controlado pelo slider que está embaixo de cada ícone.
+
+Versão [um](https://github.com/vivianemartini/FocusTimer2.0)
+
+Obs: por padrão, quando você clicar em qualquer área de um card, você pode deixar o volume em 50%.
 
 # Melhorias
 
